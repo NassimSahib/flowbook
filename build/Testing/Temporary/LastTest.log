@@ -1,0 +1,111 @@
+Start testing: May 05 15:53 CEST
+----------------------------------------------------------
+1/4 Testing: OrderBookTest.AddBuyAndSellWithoutMatch
+1/4 Test: OrderBookTest.AddBuyAndSellWithoutMatch
+Command: "/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/order_book_tests" "--gtest_filter=OrderBookTest.AddBuyAndSellWithoutMatch" "--gtest_also_run_disabled_tests"
+Directory: /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build
+"OrderBookTest.AddBuyAndSellWithoutMatch" start time: May 05 15:53 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.AddBuyAndSellWithoutMatch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.AddBuyAndSellWithoutMatch
+[       OK ] OrderBookTest.AddBuyAndSellWithoutMatch (0 ms)
+[----------] 1 test from OrderBookTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.AddBuyAndSellWithoutMatch" end time: May 05 15:53 CEST
+"OrderBookTest.AddBuyAndSellWithoutMatch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: OrderBookTest.BuyCrossesMultipleAskLevels
+2/4 Test: OrderBookTest.BuyCrossesMultipleAskLevels
+Command: "/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/order_book_tests" "--gtest_filter=OrderBookTest.BuyCrossesMultipleAskLevels" "--gtest_also_run_disabled_tests"
+Directory: /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build
+"OrderBookTest.BuyCrossesMultipleAskLevels" start time: May 05 15:53 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.BuyCrossesMultipleAskLevels
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.BuyCrossesMultipleAskLevels
+[       OK ] OrderBookTest.BuyCrossesMultipleAskLevels (0 ms)
+[----------] 1 test from OrderBookTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.BuyCrossesMultipleAskLevels" end time: May 05 15:53 CEST
+"OrderBookTest.BuyCrossesMultipleAskLevels" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: OrderBookTest.SellCrossesMultipleBidLevels
+3/4 Test: OrderBookTest.SellCrossesMultipleBidLevels
+Command: "/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/order_book_tests" "--gtest_filter=OrderBookTest.SellCrossesMultipleBidLevels" "--gtest_also_run_disabled_tests"
+Directory: /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build
+"OrderBookTest.SellCrossesMultipleBidLevels" start time: May 05 15:53 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.SellCrossesMultipleBidLevels
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.SellCrossesMultipleBidLevels
+[       OK ] OrderBookTest.SellCrossesMultipleBidLevels (0 ms)
+[----------] 1 test from OrderBookTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.SellCrossesMultipleBidLevels" end time: May 05 15:53 CEST
+"OrderBookTest.SellCrossesMultipleBidLevels" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled
+4/4 Test: OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled
+Command: "/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/order_book_tests" "--gtest_filter=OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled" "--gtest_also_run_disabled_tests"
+Directory: /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build
+"OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled" start time: May 05 15:53 CEST
+Output:
+----------------------------------------------------------
+Running main() from /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled
+[       OK ] OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled (0 ms)
+[----------] 1 test from OrderBookTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled" end time: May 05 15:53 CEST
+"OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 05 15:53 CEST

@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/nassimsahib/Desktop/projects/order-book-single-threade
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -84,6 +94,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,48 +172,126 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named orderbook
+# Target rules for targets named order_book_lib
 
 # Build rule for target.
-orderbook: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 orderbook
-.PHONY : orderbook
+order_book_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 order_book_lib
+.PHONY : order_book_lib
 
 # fast build rule for target.
-orderbook/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/build
-.PHONY : orderbook/fast
+order_book_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/build
+.PHONY : order_book_lib/fast
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+#=============================================================================
+# Target rules for targets named order_book_app
+
+# Build rule for target.
+order_book_app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 order_book_app
+.PHONY : order_book_app
+
+# fast build rule for target.
+order_book_app/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_app.dir/build.make CMakeFiles/order_book_app.dir/build
+.PHONY : order_book_app/fast
+
+#=============================================================================
+# Target rules for targets named order_book_tests
+
+# Build rule for target.
+order_book_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 order_book_tests
+.PHONY : order_book_tests
+
+# fast build rule for target.
+order_book_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_tests.dir/build.make CMakeFiles/order_book_tests.dir/build
+.PHONY : order_book_tests/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+app/main.o: app/main.cpp.o
+.PHONY : app/main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+app/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_app.dir/build.make CMakeFiles/order_book_app.dir/app/main.cpp.o
+.PHONY : app/main.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+app/main.i: app/main.cpp.i
+.PHONY : app/main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+app/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_app.dir/build.make CMakeFiles/order_book_app.dir/app/main.cpp.i
+.PHONY : app/main.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+app/main.s: app/main.cpp.s
+.PHONY : app/main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+app/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_app.dir/build.make CMakeFiles/order_book_app.dir/app/main.cpp.s
+.PHONY : app/main.cpp.s
 
 src/order.o: src/order.cpp.o
 .PHONY : src/order.o
 
 # target to build an object file
 src/order.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/order.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/order.cpp.o
 .PHONY : src/order.cpp.o
 
 src/order.i: src/order.cpp.i
@@ -166,7 +299,7 @@ src/order.i: src/order.cpp.i
 
 # target to preprocess a source file
 src/order.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/order.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/order.cpp.i
 .PHONY : src/order.cpp.i
 
 src/order.s: src/order.cpp.s
@@ -174,7 +307,7 @@ src/order.s: src/order.cpp.s
 
 # target to generate assembly for a file
 src/order.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/order.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/order.cpp.s
 .PHONY : src/order.cpp.s
 
 src/order_book.o: src/order_book.cpp.o
@@ -182,7 +315,7 @@ src/order_book.o: src/order_book.cpp.o
 
 # target to build an object file
 src/order_book.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/order_book.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/order_book.cpp.o
 .PHONY : src/order_book.cpp.o
 
 src/order_book.i: src/order_book.cpp.i
@@ -190,7 +323,7 @@ src/order_book.i: src/order_book.cpp.i
 
 # target to preprocess a source file
 src/order_book.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/order_book.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/order_book.cpp.i
 .PHONY : src/order_book.cpp.i
 
 src/order_book.s: src/order_book.cpp.s
@@ -198,7 +331,7 @@ src/order_book.s: src/order_book.cpp.s
 
 # target to generate assembly for a file
 src/order_book.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/order_book.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/order_book.cpp.s
 .PHONY : src/order_book.cpp.s
 
 src/price_level.o: src/price_level.cpp.o
@@ -206,7 +339,7 @@ src/price_level.o: src/price_level.cpp.o
 
 # target to build an object file
 src/price_level.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/price_level.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/price_level.cpp.o
 .PHONY : src/price_level.cpp.o
 
 src/price_level.i: src/price_level.cpp.i
@@ -214,7 +347,7 @@ src/price_level.i: src/price_level.cpp.i
 
 # target to preprocess a source file
 src/price_level.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/price_level.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/price_level.cpp.i
 .PHONY : src/price_level.cpp.i
 
 src/price_level.s: src/price_level.cpp.s
@@ -222,8 +355,32 @@ src/price_level.s: src/price_level.cpp.s
 
 # target to generate assembly for a file
 src/price_level.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/orderbook.dir/build.make CMakeFiles/orderbook.dir/src/price_level.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/price_level.cpp.s
 .PHONY : src/price_level.cpp.s
+
+tests/order_book_tests.o: tests/order_book_tests.cpp.o
+.PHONY : tests/order_book_tests.o
+
+# target to build an object file
+tests/order_book_tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_tests.dir/build.make CMakeFiles/order_book_tests.dir/tests/order_book_tests.cpp.o
+.PHONY : tests/order_book_tests.cpp.o
+
+tests/order_book_tests.i: tests/order_book_tests.cpp.i
+.PHONY : tests/order_book_tests.i
+
+# target to preprocess a source file
+tests/order_book_tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_tests.dir/build.make CMakeFiles/order_book_tests.dir/tests/order_book_tests.cpp.i
+.PHONY : tests/order_book_tests.cpp.i
+
+tests/order_book_tests.s: tests/order_book_tests.cpp.s
+.PHONY : tests/order_book_tests.s
+
+# target to generate assembly for a file
+tests/order_book_tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_tests.dir/build.make CMakeFiles/order_book_tests.dir/tests/order_book_tests.cpp.s
+.PHONY : tests/order_book_tests.cpp.s
 
 # Help Target
 help:
@@ -232,11 +389,22 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... orderbook"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... test"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... order_book_app"
+	@echo "... order_book_lib"
+	@echo "... order_book_tests"
+	@echo "... app/main.o"
+	@echo "... app/main.i"
+	@echo "... app/main.s"
 	@echo "... src/order.o"
 	@echo "... src/order.i"
 	@echo "... src/order.s"
@@ -246,6 +414,9 @@ help:
 	@echo "... src/price_level.o"
 	@echo "... src/price_level.i"
 	@echo "... src/price_level.s"
+	@echo "... tests/order_book_tests.o"
+	@echo "... tests/order_book_tests.i"
+	@echo "... tests/order_book_tests.s"
 .PHONY : help
 
 
