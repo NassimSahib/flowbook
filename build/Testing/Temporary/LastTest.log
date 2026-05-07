@@ -1,10 +1,10 @@
-Start testing: May 05 15:53 CEST
+Start testing: May 07 17:18 CEST
 ----------------------------------------------------------
 1/4 Testing: OrderBookTest.AddBuyAndSellWithoutMatch
 1/4 Test: OrderBookTest.AddBuyAndSellWithoutMatch
 Command: "/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/order_book_tests" "--gtest_filter=OrderBookTest.AddBuyAndSellWithoutMatch" "--gtest_also_run_disabled_tests"
 Directory: /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build
-"OrderBookTest.AddBuyAndSellWithoutMatch" start time: May 05 15:53 CEST
+"OrderBookTest.AddBuyAndSellWithoutMatch" start time: May 07 17:18 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -23,7 +23,7 @@ Note: Google Test filter = OrderBookTest.AddBuyAndSellWithoutMatch
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.AddBuyAndSellWithoutMatch" end time: May 05 15:53 CEST
+"OrderBookTest.AddBuyAndSellWithoutMatch" end time: May 07 17:18 CEST
 "OrderBookTest.AddBuyAndSellWithoutMatch" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Test Passed.
 2/4 Test: OrderBookTest.BuyCrossesMultipleAskLevels
 Command: "/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/order_book_tests" "--gtest_filter=OrderBookTest.BuyCrossesMultipleAskLevels" "--gtest_also_run_disabled_tests"
 Directory: /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build
-"OrderBookTest.BuyCrossesMultipleAskLevels" start time: May 05 15:53 CEST
+"OrderBookTest.BuyCrossesMultipleAskLevels" start time: May 07 17:18 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -50,7 +50,7 @@ Note: Google Test filter = OrderBookTest.BuyCrossesMultipleAskLevels
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.BuyCrossesMultipleAskLevels" end time: May 05 15:53 CEST
+"OrderBookTest.BuyCrossesMultipleAskLevels" end time: May 07 17:18 CEST
 "OrderBookTest.BuyCrossesMultipleAskLevels" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -58,7 +58,7 @@ Test Passed.
 3/4 Test: OrderBookTest.SellCrossesMultipleBidLevels
 Command: "/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/order_book_tests" "--gtest_filter=OrderBookTest.SellCrossesMultipleBidLevels" "--gtest_also_run_disabled_tests"
 Directory: /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build
-"OrderBookTest.SellCrossesMultipleBidLevels" start time: May 05 15:53 CEST
+"OrderBookTest.SellCrossesMultipleBidLevels" start time: May 07 17:18 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -77,7 +77,7 @@ Note: Google Test filter = OrderBookTest.SellCrossesMultipleBidLevels
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.SellCrossesMultipleBidLevels" end time: May 05 15:53 CEST
+"OrderBookTest.SellCrossesMultipleBidLevels" end time: May 07 17:18 CEST
 "OrderBookTest.SellCrossesMultipleBidLevels" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -85,7 +85,7 @@ Test Passed.
 4/4 Test: OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled
 Command: "/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/order_book_tests" "--gtest_filter=OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled" "--gtest_also_run_disabled_tests"
 Directory: /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build
-"OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled" start time: May 05 15:53 CEST
+"OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled" start time: May 07 17:18 CEST
 Output:
 ----------------------------------------------------------
 Running main() from /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -104,8 +104,8 @@ Note: Google Test filter = OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartial
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled" end time: May 05 15:53 CEST
+"OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled" end time: May 07 17:18 CEST
 "OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 05 15:53 CEST
+End testing: May 07 17:18 CEST
