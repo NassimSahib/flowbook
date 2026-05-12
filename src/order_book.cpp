@@ -1,50 +1,98 @@
+#include "order_book.hpp"
 #include "order.hpp"
 #include "price_level.hpp"
-#include "order_book.hpp"
+#include "trade.hpp"
 
-#include <iostream>
+#include <algorithm>
 #include <stdexcept>
+#include <vector>
 
-bool OrderBook::CanMatch(const Order &incoming) const {
+bool OrderBook::CanMatch(const Order& incoming) const {
     if (incoming.GetSide() == Side::Buy) {
         return !asks_.empty() && incoming.GetPrice() >= asks_.begin()->first;
     }
+
     return !bids_.empty() && incoming.GetPrice() <= bids_.begin()->first;
 }
 
-void OrderBook::Match(Order &incoming) {
-    while (incoming.GetRemainingQuantity() && CanMatch(incoming)) {
-        if (incoming.GetSide() == Side::Buy) {
-            if (asks_.empty()) break;
+std::vector<Trade> OrderBook::Match(Order& incoming) {
+    std::vector<Trade> trades;
 
+    while (incoming.GetRemainingQuantity() > 0 && CanMatch(incoming)) {
+        if (incoming.GetSide() == Side::Buy) {
             auto best_level = asks_.begin();
 
-            Quantity matched = best_level->second.Match(incoming.GetRemainingQuantity());
-                incoming.ReduceQuantity(matched);
+            Order& resting = best_level->second.Front();
 
-                if (best_level->second.Empty()) {
-                    asks_.erase(best_level);
-                }
-            } else {
-                if (bids_.empty()) break;
+            Quantity matched = std::min(
+                incoming.GetRemainingQuantity(),
+                resting.GetRemainingQuantity()
+            );
 
-                auto best_level = bids_.begin();
+            Trade trade(
+                incoming.GetId(),          // buy order id
+                resting.GetId(),           // sell order id
+                best_level->first,         // execution price
+                matched,
+                incoming.GetTimestamp()    // timestamp of incoming order
+            );
 
-                Quantity matched = best_level->second.Match(incoming.GetRemainingQuantity());
-                incoming.ReduceQuantity(matched);
+            trades.push_back(trade);
 
-                if (best_level->second.Empty()) {
-                    bids_.erase(best_level);
-                }
-                
+            incoming.ReduceQuantity(matched);
+            resting.ReduceQuantity(matched);
+
+            if (resting.GetRemainingQuantity() == 0) {
+                best_level->second.PopFront();
+            }
+
+            if (best_level->second.Empty()) {
+                asks_.erase(best_level);
+            }
+        } else {
+            auto best_level = bids_.begin();
+
+            Order& resting = best_level->second.Front();
+
+            Quantity matched = std::min(
+                incoming.GetRemainingQuantity(),
+                resting.GetRemainingQuantity()
+            );
+
+            Trade trade(
+                resting.GetId(),           // buy order id
+                incoming.GetId(),          // sell order id
+                best_level->first,         // execution price
+                matched,
+                incoming.GetTimestamp()    // timestamp of incoming order
+            );
+
+            trades.push_back(trade);
+
+            incoming.ReduceQuantity(matched);
+            resting.ReduceQuantity(matched);
+
+            if (resting.GetRemainingQuantity() == 0) {
+                best_level->second.PopFront();
+            }
+
+            if (best_level->second.Empty()) {
+                bids_.erase(best_level);
             }
         }
     }
 
-void OrderBook::AddOrder(Order order) {
-    Match(order);
-    if (order.GetRemainingQuantity() > 0) 
+    return trades;
+}
+
+std::vector<Trade> OrderBook::AddOrder(Order order) {
+    std::vector<Trade> trades = Match(order);
+
+    if (order.GetRemainingQuantity() > 0) {
         AddToBook(order);
+    }
+
+    return trades;
 }
 
 void OrderBook::AddToBook(const Order& order) {
@@ -68,7 +116,7 @@ void OrderBook::AddToBook(const Order& order) {
         } else {
             it->second.AddOrder(order);
         }
-    } 
+    }
 }
 
 std::size_t OrderBook::BidLevelCount() const {

@@ -9,22 +9,22 @@
         {
           "name": "AddBuyAndSellWithoutMatch",
           "file": "\/Users\/nassimsahib\/Desktop\/projects\/order-book-single-threaded\/tests\/order_book_tests.cpp",
-          "line": 6
+          "line": 7
         },
         {
-          "name": "BuyCrossesMultipleAskLevels",
+          "name": "BuyCrossesMultipleAskLevelsAndGeneratesTrades",
           "file": "\/Users\/nassimsahib\/Desktop\/projects\/order-book-single-threaded\/tests\/order_book_tests.cpp",
-          "line": 19
+          "line": 23
         },
         {
-          "name": "SellCrossesMultipleBidLevels",
+          "name": "SellCrossesMultipleBidLevelsAndGeneratesTrades",
           "file": "\/Users\/nassimsahib\/Desktop\/projects\/order-book-single-threaded\/tests\/order_book_tests.cpp",
-          "line": 33
+          "line": 53
         },
         {
-          "name": "FifoAtSamePriceLeavesSecondOrderPartiallyFilled",
+          "name": "FifoAtSamePriceLeavesSecondOrderPartiallyFilledAndGeneratesTrades",
           "file": "\/Users\/nassimsahib\/Desktop\/projects\/order-book-single-threaded\/tests\/order_book_tests.cpp",
-          "line": 47
+          "line": 83
         }
       ]
     }

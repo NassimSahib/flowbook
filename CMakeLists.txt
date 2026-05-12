@@ -11,6 +11,7 @@ add_library(order_book_lib
     src/order.cpp
     src/price_level.cpp
     src/order_book.cpp
+    src/trade.cpp
 )
 
 target_include_directories(order_book_lib

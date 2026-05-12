@@ -667,6 +667,7 @@ CMakeFiles/order_book_tests.dir/tests/order_book_tests.cpp.o: \
   /Users/nassimsahib/Desktop/projects/order-book-single-threaded/include/price_level.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/deque \
   /Users/nassimsahib/Desktop/projects/order-book-single-threaded/include/order.hpp \
+  /Users/nassimsahib/Desktop/projects/order-book-single-threaded/include/trade.hpp \
   /Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \

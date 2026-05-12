@@ -786,8 +786,11 @@ CMakeFiles/order_book_tests.dir/tests/order_book_tests.cpp.o: /Users/nassimsahib
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
   /Users/nassimsahib/Desktop/projects/order-book-single-threaded/include/order.hpp \
   /Users/nassimsahib/Desktop/projects/order-book-single-threaded/include/order_book.hpp \
-  /Users/nassimsahib/Desktop/projects/order-book-single-threaded/include/price_level.hpp
+  /Users/nassimsahib/Desktop/projects/order-book-single-threaded/include/price_level.hpp \
+  /Users/nassimsahib/Desktop/projects/order-book-single-threaded/include/trade.hpp
 
+
+/Users/nassimsahib/Desktop/projects/order-book-single-threaded/include/trade.hpp:
 
 /Users/nassimsahib/Desktop/projects/order-book-single-threaded/include/order_book.hpp:
 

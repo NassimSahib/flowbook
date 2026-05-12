@@ -1,28 +1,22 @@
 #pragma once
 
 #include <map>
+#include <vector>
+
 #include <cstddef>
 #include "price_level.hpp"
+#include "trade.hpp"
 
-class OrderBook
-{
+class OrderBook {
 private:
-    // Buyside (highest price first)
     std::map<Price, PriceLevel, std::greater<>> bids_;
-
-    // Sell side (lowest price first)
     std::map<Price, PriceLevel, std::less<>> asks_;
 
 public:
     OrderBook() = default;
 
-    // Core API
-    void AddOrder(Order order);
+    std::vector<Trade> AddOrder(Order order);
 
-    // Print
-    void PrintBook() const;
-
-        // Test / Query Helpers
     std::size_t BidLevelCount() const;
     std::size_t AskLevelCount() const;
 
@@ -33,11 +27,7 @@ public:
     Quantity GetFrontBidRemainingQuantityAtPrice(Price price) const;
 
 private:
-    // Matching logic
-    void Match(Order &incoming);
-
-    // Helpers
+    std::vector<Trade> Match(Order &incoming);
     void AddToBook(const Order &order);
-
     bool CanMatch(const Order &incoming) const;
 };

@@ -358,6 +358,30 @@ src/price_level.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/price_level.cpp.s
 .PHONY : src/price_level.cpp.s
 
+src/trade.o: src/trade.cpp.o
+.PHONY : src/trade.o
+
+# target to build an object file
+src/trade.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/trade.cpp.o
+.PHONY : src/trade.cpp.o
+
+src/trade.i: src/trade.cpp.i
+.PHONY : src/trade.i
+
+# target to preprocess a source file
+src/trade.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/trade.cpp.i
+.PHONY : src/trade.cpp.i
+
+src/trade.s: src/trade.cpp.s
+.PHONY : src/trade.s
+
+# target to generate assembly for a file
+src/trade.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/order_book_lib.dir/build.make CMakeFiles/order_book_lib.dir/src/trade.cpp.s
+.PHONY : src/trade.cpp.s
+
 tests/order_book_tests.o: tests/order_book_tests.cpp.o
 .PHONY : tests/order_book_tests.o
 
@@ -414,6 +438,9 @@ help:
 	@echo "... src/price_level.o"
 	@echo "... src/price_level.i"
 	@echo "... src/price_level.s"
+	@echo "... src/trade.o"
+	@echo "... src/trade.i"
+	@echo "... src/trade.s"
 	@echo "... tests/order_book_tests.o"
 	@echo "... tests/order_book_tests.i"
 	@echo "... tests/order_book_tests.s"

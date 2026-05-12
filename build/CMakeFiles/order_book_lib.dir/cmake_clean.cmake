@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/order_book_lib.dir/src/order_book.cpp.o.d"
   "CMakeFiles/order_book_lib.dir/src/price_level.cpp.o"
   "CMakeFiles/order_book_lib.dir/src/price_level.cpp.o.d"
+  "CMakeFiles/order_book_lib.dir/src/trade.cpp.o"
+  "CMakeFiles/order_book_lib.dir/src/trade.cpp.o.d"
   "liborder_book_lib.a"
   "liborder_book_lib.pdb"
 )

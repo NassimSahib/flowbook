@@ -19,6 +19,10 @@ Price Order::GetPrice() const {
     return price_;
 }
 
+Timestamp Order::GetTimestamp() const {
+    return timestamp_;
+}
+
 Side Order::GetSide() const {
     return side_;
 }

@@ -24,11 +24,14 @@ private:
     Side side_;
 public:
     Order(OrderId id, Timestamp ts, Price price, Quantity qty, Side side);
+    
     OrderId GetId() const;
     Price GetPrice() const;
+    Timestamp GetTimestamp() const;
     Side GetSide() const;
     Quantity GetQuantity() const;
     Quantity GetRemainingQuantity() const;
+    
 
     void ReduceQuantity(Quantity quantity);
 };
