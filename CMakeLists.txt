@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(order_book_single_threaded LANGUAGES CXX)
+project(flowbook LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
