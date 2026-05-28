@@ -1,32 +1,7 @@
 {
-  "tests": 4,
+  "tests": 0,
   "name": "AllTests",
   "testsuites": [
-    {
-      "name": "OrderBookTest",
-      "tests": 4,
-      "testsuite": [
-        {
-          "name": "AddBuyAndSellWithoutMatch",
-          "file": "\/Users\/nassimsahib\/Desktop\/projects\/order-book-single-threaded\/tests\/order_book_tests.cpp",
-          "line": 7
-        },
-        {
-          "name": "BuyCrossesMultipleAskLevelsAndGeneratesTrades",
-          "file": "\/Users\/nassimsahib\/Desktop\/projects\/order-book-single-threaded\/tests\/order_book_tests.cpp",
-          "line": 23
-        },
-        {
-          "name": "SellCrossesMultipleBidLevelsAndGeneratesTrades",
-          "file": "\/Users\/nassimsahib\/Desktop\/projects\/order-book-single-threaded\/tests\/order_book_tests.cpp",
-          "line": 53
-        },
-        {
-          "name": "FifoAtSamePriceLeavesSecondOrderPartiallyFilledAndGeneratesTrades",
-          "file": "\/Users\/nassimsahib\/Desktop\/projects\/order-book-single-threaded\/tests\/order_book_tests.cpp",
-          "line": 83
-        }
-      ]
-    }
+
   ]
 }

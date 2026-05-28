@@ -2,9 +2,14 @@ cmake_minimum_required(VERSION 3.20)
 
 project(flowbook LANGUAGES CXX)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
+# fmt installed with Homebrew
+find_package(fmt REQUIRED)
 
 # Core library
 add_library(order_book_lib
@@ -17,6 +22,11 @@ add_library(order_book_lib
 target_include_directories(order_book_lib
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_link_libraries(order_book_lib
+    PUBLIC
+        fmt::fmt
 )
 
 # Warnings

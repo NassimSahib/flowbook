@@ -1,1 +1,1 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/order_book_app.dir/app/main.cpp.o -o order_book_app  liborder_book_lib.a
+/usr/bin/c++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/order_book_app.dir/app/main.cpp.o -o order_book_app  -Wl,-rpath,/Users/nassimsahib/anaconda3/lib liborder_book_lib.a /Users/nassimsahib/anaconda3/lib/libfmt.9.1.0.dylib

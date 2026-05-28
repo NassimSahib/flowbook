@@ -1,10 +1,10 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/cmake_install.cmake",
-		"/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-build/cmake_install.cmake",
-		"/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-build/googlemock/cmake_install.cmake",
-		"/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-build/googletest/cmake_install.cmake"
+		"/Users/nassimsahib/Desktop/projects/flowbook/build/cmake_install.cmake",
+		"/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-build/cmake_install.cmake",
+		"/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-build/googletest/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

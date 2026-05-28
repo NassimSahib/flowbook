@@ -21,8 +21,6 @@ events:
       - "uname"
     candidate_directories:
       - "/opt/homebrew/opt/openjdk@17/bin/"
-      - "/Users/nassimsahib/.local/bin/"
-      - "/Users/nassimsahib/anaconda3/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
@@ -40,10 +38,11 @@ events:
       - "/usr/local/share/dotnet/"
       - "/Users/nassimsahib/.dotnet/tools/"
       - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+      - "/Users/nassimsahib/.local/bin/"
+      - "/Users/nassimsahib/anaconda3/bin/"
+      - "/Users/nassimsahib/anaconda3/condabin/"
     searched_directories:
       - "/opt/homebrew/opt/openjdk@17/bin/uname"
-      - "/Users/nassimsahib/.local/bin/uname"
-      - "/Users/nassimsahib/anaconda3/bin/uname"
       - "/opt/homebrew/bin/uname"
       - "/opt/homebrew/sbin/uname"
       - "/Library/Frameworks/Python.framework/Versions/3.10/bin/uname"
@@ -53,8 +52,6 @@ events:
     search_context:
       ENV{PATH}:
         - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/Users/nassimsahib/.local/bin"
-        - "/Users/nassimsahib/anaconda3/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
@@ -72,6 +69,10 @@ events:
         - "/usr/local/share/dotnet"
         - "~/.dotnet/tools"
         - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+        - "/opt/homebrew/opt/openjdk@17/bin"
+        - "/Users/nassimsahib/.local/bin"
+        - "/Users/nassimsahib/anaconda3/bin"
+        - "/Users/nassimsahib/anaconda3/condabin"
   -
     kind: "message-v1"
     backtrace:
@@ -100,8 +101,6 @@ events:
       - "install_name_tool"
     candidate_directories:
       - "/opt/homebrew/opt/openjdk@17/bin/"
-      - "/Users/nassimsahib/.local/bin/"
-      - "/Users/nassimsahib/anaconda3/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
       - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
@@ -119,15 +118,20 @@ events:
       - "/usr/local/share/dotnet/"
       - "/Users/nassimsahib/.dotnet/tools/"
       - "/Library/Frameworks/Mono.framework/Versions/Current/Commands/"
+      - "/Users/nassimsahib/.local/bin/"
+      - "/Users/nassimsahib/anaconda3/bin/"
+      - "/Users/nassimsahib/anaconda3/condabin/"
     searched_directories:
       - "/opt/homebrew/opt/openjdk@17/bin/install_name_tool"
-      - "/Users/nassimsahib/.local/bin/install_name_tool"
-    found: "/Users/nassimsahib/anaconda3/bin/install_name_tool"
+      - "/opt/homebrew/bin/install_name_tool"
+      - "/opt/homebrew/sbin/install_name_tool"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/install_name_tool"
+      - "/usr/local/bin/install_name_tool"
+      - "/System/Cryptexes/App/usr/bin/install_name_tool"
+    found: "/usr/bin/install_name_tool"
     search_context:
       ENV{PATH}:
         - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/Users/nassimsahib/.local/bin"
-        - "/Users/nassimsahib/anaconda3/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
@@ -145,5 +149,9 @@ events:
         - "/usr/local/share/dotnet"
         - "~/.dotnet/tools"
         - "/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+        - "/opt/homebrew/opt/openjdk@17/bin"
+        - "/Users/nassimsahib/.local/bin"
+        - "/Users/nassimsahib/anaconda3/bin"
+        - "/Users/nassimsahib/anaconda3/condabin"
       CMAKE_INSTALL_PREFIX: "/usr/local"
 ...

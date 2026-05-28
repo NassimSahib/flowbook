@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/Users/nassimsahib/Desktop/projects/flowbook/build",
+  "command": "/usr/bin/c++ -DFMT_SHARED -I/Users/nassimsahib/Desktop/projects/flowbook/include -isystem /Users/nassimsahib/anaconda3/include -g -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/order_book_lib.dir/src/order.cpp.o -c /Users/nassimsahib/Desktop/projects/flowbook/src/order.cpp",
+  "file": "/Users/nassimsahib/Desktop/projects/flowbook/src/order.cpp",
+  "output": "CMakeFiles/order_book_lib.dir/src/order.cpp.o"
+},
+{
+  "directory": "/Users/nassimsahib/Desktop/projects/flowbook/build",
+  "command": "/usr/bin/c++ -DFMT_SHARED -I/Users/nassimsahib/Desktop/projects/flowbook/include -isystem /Users/nassimsahib/anaconda3/include -g -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/order_book_lib.dir/src/price_level.cpp.o -c /Users/nassimsahib/Desktop/projects/flowbook/src/price_level.cpp",
+  "file": "/Users/nassimsahib/Desktop/projects/flowbook/src/price_level.cpp",
+  "output": "CMakeFiles/order_book_lib.dir/src/price_level.cpp.o"
+},
+{
+  "directory": "/Users/nassimsahib/Desktop/projects/flowbook/build",
+  "command": "/usr/bin/c++ -DFMT_SHARED -I/Users/nassimsahib/Desktop/projects/flowbook/include -isystem /Users/nassimsahib/anaconda3/include -g -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/order_book_lib.dir/src/order_book.cpp.o -c /Users/nassimsahib/Desktop/projects/flowbook/src/order_book.cpp",
+  "file": "/Users/nassimsahib/Desktop/projects/flowbook/src/order_book.cpp",
+  "output": "CMakeFiles/order_book_lib.dir/src/order_book.cpp.o"
+},
+{
+  "directory": "/Users/nassimsahib/Desktop/projects/flowbook/build",
+  "command": "/usr/bin/c++ -DFMT_SHARED -I/Users/nassimsahib/Desktop/projects/flowbook/include -isystem /Users/nassimsahib/anaconda3/include -g -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/order_book_lib.dir/src/trade.cpp.o -c /Users/nassimsahib/Desktop/projects/flowbook/src/trade.cpp",
+  "file": "/Users/nassimsahib/Desktop/projects/flowbook/src/trade.cpp",
+  "output": "CMakeFiles/order_book_lib.dir/src/trade.cpp.o"
+},
+{
+  "directory": "/Users/nassimsahib/Desktop/projects/flowbook/build",
+  "command": "/usr/bin/c++ -DFMT_SHARED -I/Users/nassimsahib/Desktop/projects/flowbook/include -isystem /Users/nassimsahib/anaconda3/include -g -std=c++20 -arch arm64 -o CMakeFiles/order_book_app.dir/app/main.cpp.o -c /Users/nassimsahib/Desktop/projects/flowbook/app/main.cpp",
+  "file": "/Users/nassimsahib/Desktop/projects/flowbook/app/main.cpp",
+  "output": "CMakeFiles/order_book_app.dir/app/main.cpp.o"
+},
+{
+  "directory": "/Users/nassimsahib/Desktop/projects/flowbook/build",
+  "command": "/usr/bin/c++ -DFMT_SHARED -I/Users/nassimsahib/Desktop/projects/flowbook/include -isystem /Users/nassimsahib/anaconda3/include -isystem /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest/include -isystem /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest -g -std=c++20 -arch arm64 -o CMakeFiles/order_book_tests.dir/tests/order_book_tests.cpp.o -c /Users/nassimsahib/Desktop/projects/flowbook/tests/order_book_tests.cpp",
+  "file": "/Users/nassimsahib/Desktop/projects/flowbook/tests/order_book_tests.cpp",
+  "output": "CMakeFiles/order_book_tests.dir/tests/order_book_tests.cpp.o"
+},
+{
+  "directory": "/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googlemock/include -I/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googlemock -isystem /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest/include -isystem /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest -g -std=c++20 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -isystem /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googlemock/include -isystem /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googlemock -isystem /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest/include -isystem /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest -g -std=c++20 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest/include -I/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest -g -std=c++20 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -isystem /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest/include -isystem /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest -g -std=c++20 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+}
+]

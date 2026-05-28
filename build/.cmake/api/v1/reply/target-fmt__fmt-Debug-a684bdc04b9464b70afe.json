@@ -1,0 +1,74 @@
+{
+	"abstract" : true,
+	"artifacts" : 
+	[
+		{
+			"path" : "/Users/nassimsahib/anaconda3/lib/libfmt.9.1.0.dylib"
+		}
+	],
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include",
+			"find_package"
+		],
+		"files" : 
+		[
+			"/Users/nassimsahib/anaconda3/lib/cmake/fmt/fmt-targets.cmake",
+			"/Users/nassimsahib/anaconda3/lib/cmake/fmt/fmt-config.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"file" : 1,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 28,
+				"parent" : 2
+			},
+			{
+				"file" : 0,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 54,
+				"parent" : 4
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "fmt::fmt::@6890427a1f51a3e7e1df",
+	"imported" : true,
+	"local" : true,
+	"name" : "fmt::fmt",
+	"nameOnDisk" : "libfmt.9.1.0.dylib",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "SHARED_LIBRARY"
+}

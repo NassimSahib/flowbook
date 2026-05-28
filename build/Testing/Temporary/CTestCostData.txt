@@ -1,8 +1,0 @@
-OrderBookTest.AddBuyAndSellWithoutMatch 5 0.00078485
-OrderBookTest.BuyCrossesMultipleAskLevels 3 0.00101215
-OrderBookTest.SellCrossesMultipleBidLevels 3 0.000984361
-OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilled 3 0.00121282
-OrderBookTest.BuyCrossesMultipleAskLevelsAndGeneratesTrades 2 0.0015784
-OrderBookTest.SellCrossesMultipleBidLevelsAndGeneratesTrades 2 0.00177846
-OrderBookTest.FifoAtSamePriceLeavesSecondOrderPartiallyFilledAndGeneratesTrades 2 0.00136915
----

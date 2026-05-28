@@ -1,1 +1,1 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/order_book_tests.dir/tests/order_book_tests.cpp.o -o order_book_tests  liborder_book_lib.a lib/libgtest_main.a lib/libgtest.a
+/usr/bin/c++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/order_book_tests.dir/tests/order_book_tests.cpp.o -o order_book_tests  -Wl,-rpath,/Users/nassimsahib/anaconda3/lib liborder_book_lib.a lib/libgtest_main.a /Users/nassimsahib/anaconda3/lib/libfmt.9.1.0.dylib lib/libgtest.a

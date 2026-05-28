@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20260528-1445-Experimental"
+	Name="(empty)"
+	Generator="ctest-4.3.2"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="macOS"
+	Hostname="Air-de-Nassim.lan"
+	OSRelease="14.6.1"
+	OSVersion="23G93"
+	OSPlatform="arm64"
+	Is64Bits="1"
+	VendorString="Apple"
+	VendorID="Apple"
+	FamilyID="0"
+	ModelID="0"
+	ModelName="Apple M1"
+	ProcessorCacheSize="131072"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="4096"
+	TotalPhysicalMemory="8192"
+	LogicalProcessorsPerPhysical="8"
+	ProcessorClockFrequency="0.000000"
+	>
+	<Testing>
+		<StartDateTime>May 28 16:45 CEST</StartDateTime>
+		<StartTestTime>1779979514</StartTestTime>
+		<TestList/>
+		<EndDateTime>May 28 16:45 CEST</EndDateTime>
+		<EndTestTime>1779979514</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

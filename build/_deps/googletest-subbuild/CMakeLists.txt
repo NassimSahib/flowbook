@@ -20,8 +20,8 @@ project(googletest-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(googletest-populate
                      "UPDATE_DISCONNECTED" "False" "DOWNLOAD_EXTRACT_TIMESTAMP" "TRUE" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "URL" "https://github.com/google/googletest/archive/refs/tags/v1.17.0.zip"
-                    SOURCE_DIR          "/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-src"
-                    BINARY_DIR          "/Users/nassimsahib/Desktop/projects/order-book-single-threaded/build/_deps/googletest-build"
+                    SOURCE_DIR          "/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-src"
+                    BINARY_DIR          "/Users/nassimsahib/Desktop/projects/flowbook/build/_deps/googletest-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""
