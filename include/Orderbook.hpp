@@ -38,6 +38,7 @@ private:
     std::map<Price, OrderPointers, std::greater<Price>> bids_;
     std::map<Price, OrderPointers, std::less<Price>> asks_;
     std::unordered_map<OrderId, OrderEntry> orders_;
+
     mutable std::mutex ordersMutex_;
     std::thread ordersPruneThread_;
     std::condition_variable shutdownConditionVariable_;
@@ -46,7 +47,7 @@ private:
     void PruneGoodForDayOrders();
 
     void CancelOrders(OrderIds orderIds);
-    void CancelOrderId(OrderId orderId);
+    void CancelOrderInternal(OrderId orderId);
 
     void OnOrderCancelled(OrderPointer order);
     void OnOrderAdded(OrderPointer order);
