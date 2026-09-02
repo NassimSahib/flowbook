@@ -1,0 +1,18 @@
+# Visual Studio
+.vs/
+
+# Build outputs
+build/
+build-*/
+out/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+
+# Compiled files
+*.obj
+*.o
+*.exe
+*.lib
+*.a
