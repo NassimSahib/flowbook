@@ -14,7 +14,11 @@ void Orderbook::PruneGoodForDayOrders()
         const auto now = system_clock::now();
         const auto now_c = system_clock::to_time_t(now);
         std::tm now_parts;
-        localtime_r(&now_parts, &now_c);
+        #ifdef _WIN32
+             localtime_s(&now_parts, &now_c);
+        #else
+             localtime_r(&now_c, &now_parts);
+        #endif
 
         if (now_parts.tm_hour >= end.count())
             now_parts.tm_mday += 1;
@@ -38,9 +42,9 @@ void Orderbook::PruneGoodForDayOrders()
         {
             std::scoped_lock ordersLock{ ordersMutex_ };
 
-            for (const auto& [_, entry] : orders_)
+            for (const auto& [OrderId, entry] : orders_)
             {
-                const auto& [order, _] = entry;
+                const auto& [order, iterator] = entry;
 
                 if (order->GetOrderType() != OrderType::GoodForDay)
                    continue;
@@ -96,7 +100,7 @@ void Orderbook::OnOrderCancelled(OrderPointer order)
 
 void Orderbook::OnOrderAdded(OrderPointer order)
 {
-    UpdateLevelData(order->GetPruce(), order->GetInitialQuantity(), LevelData::Action::Add);
+    UpdateLevelData(order->GetPrice(), order->GetInitialQuantity(), LevelData::Action::Add);
 }
 
 void Orderbook::OnOrderMatched(Price price, Quantity quantity, bool isFullyFilled)
@@ -172,7 +176,7 @@ bool Orderbook::CanMatch(Side side, Price price) const
             return false;
         
         const auto& [bestAsk, _] = *asks_.begin();
-        return pruce >= bestAsk;
+        return price >= bestAsk;
     }
     else
     {
@@ -246,17 +250,17 @@ Trades Orderbook::MatchOrders()
 
     if (!bids_.empty())
     {
-        auto& [_, bids] = *bids.begin();
+        auto& [_, bids] = *bids_.begin();
         auto& order = bids.front();
         if (order->GetOrderType() == OrderType::FillAndKill)
-            CancelOrder(order-GetOrderId());
+            CancelOrder(order->GetOrderId());
     }
     
     if (!asks_.empty())
     {
-        auto& [_, asks] = *asks_begin();
+        auto& [_, asks] = *asks_.begin();
         auto& order = asks.front();
-        if (order->GetOrderType() == OrderTYpe::FillAndKill)
+        if (order->GetOrderType() == OrderType::FillAndKill)
             CancelOrder(order->GetOrderId());
     }
 
@@ -305,9 +309,9 @@ Trades Orderbook::AddOrder(OrderPointer order)
 
     if (order->GetSide() == Side::Buy)
     {
-        auto& order = bids_[order->GetPrice()];
+        auto& orders = bids_[order->GetPrice()];
         orders.push_back(order);
-        iterator = std::prev(orders.end())
+        iterator = std::prev(orders.end());
     }
     else 
     {
@@ -326,7 +330,7 @@ Trades Orderbook::AddOrder(OrderPointer order)
 
 void Orderbook::CancelOrder(OrderId orderId)
 {
-    std::scoped_lock ordersLock{ ordersMutex_ }:
+    std::scoped_lock ordersLock{ ordersMutex_ };
 
     CancelOrderInternal(orderId);
 }
@@ -336,10 +340,10 @@ Trades Orderbook::ModifyOrder(OrderModify order)
     OrderType orderType;
 
     {
-        std::scoped_lock orderLock{ ordersMutex_ }:
+        std::scoped_lock orderLock{ ordersMutex_ };
 
         if (!orders_.contains(order.GetOrderId()))
-            return { }:
+            return { };
         
         const auto& [existingOrder, _] = orders_.at(order.GetOrderId());
         orderType = existingOrder->GetOrderType();

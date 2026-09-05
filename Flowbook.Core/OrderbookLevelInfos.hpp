@@ -2,10 +2,10 @@
 
 #include "LevelInfo.hpp"
 
-class OrderBookLevelInfos
+class OrderbookLevelInfos
 {
 public:
-    OrderBookLevelInfos(const LevelInfos& bids, const LevelInfos& asks)
+    OrderbookLevelInfos(const LevelInfos& bids, const LevelInfos& asks)
     : bids_{ bids }
     , asks_{ asks }
     { }
