@@ -2,5 +2,5 @@
 
 enum class Side {
     Buy,
-    Side
+    Sell
 };
