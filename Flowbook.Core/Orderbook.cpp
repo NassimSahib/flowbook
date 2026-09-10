@@ -135,12 +135,12 @@ bool Orderbook::CanFullyFill(Side side, Price price, Quantity quantity) const
 
     if (side == Side::Buy)
     {
-        const auto [askPrice, _] = *asks_.begin();
+        const auto& [askPrice, _] = *asks_.begin();
         threshold = askPrice;
     }
     else
     {
-        const auto [bidPrice, _] = *bids_.begin();
+        const auto& [bidPrice, _] = *bids_.begin();
         threshold = bidPrice;
     }
 
