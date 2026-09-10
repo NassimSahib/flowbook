@@ -292,7 +292,7 @@ Trades Orderbook::AddOrder(OrderPointer order)
         }
         else if (order->GetSide() == Side::Sell && !bids_.empty())
         {
-            const auto& [worstBid, _] = *asks_.rbegin();
+            const auto& [worstBid, _] = *bids_.rbegin();
             order->ToGoodTillCancel(worstBid);
         }
         else 
